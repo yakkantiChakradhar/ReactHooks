@@ -1,0 +1,64 @@
+''''''''''' what is React Hooks ? ''''''''''
+
+--- Hooks are a new feature addition in React version 16.8 which allows you to use React features without having to write a class.
+    eg: - state of a component
+
+    Hooks don't work inside classes
+
+"""""""""  Why Hooks ? ''''''''''''''
+
+Reason set 1 : -
+````````````
+
+--- understand how this keyword works in javascript.
+    remember to bind event handlers in class components.
+    Classes don't modify verywell and make hot reloading very unreliable.
+
+----Above mentioned way are used in class components. since we are not going to work with classes we are not going to face this problems. 
+
+Reason set 2 :-
+`````````````
+
+There is no particular way to reuse statefull component logic.
+since we have HOC and Render props patterns do address this problem make the code harder to follow.
+there is need a to share statefull logic in a better way.
+
+--- Hooks help us to reuse statefull logic without changing our hierarcy
+
+Reason set 3 : -
+`````````````
+
+Create componets for complex scenarios such as data fetching and subscribing to event related code is not organized in one place.
+
+ex: - Data fetching -> In componentDidMount  and componentDidUpdate
+      EventListenrs -> In componentDidMount and componentWillUnmount
+
+      Because of statefull logic cannot break components into smaller ones.
+
+Hooks let you split into one componet into smaller function based on what peaces are related.
+
+
+NET WORTHY   points: -
+````````````````````
+
+React version 16.8 or higher, completely opt in.
+
+Hooks don't contain any breaking changes in the release is 100% backwards- compatible.
+
+Classes won't be removed from React.
+
+Can't use hooks inside of a class components.
+
+Hook's don't replace your existing knowledge of react concept.
+
+Instead Hooks provide a more direct API to the react components you already know.
+
+
+Rules of HOOKS : - 
+````````````````
+
+"Only call hooks at the top level".
+Don't call hooks inside loops, conditions, or nested function.
+
+"Only call hooks from React Functions".
+Call them from within React functional components and not just any regular javascript function.
