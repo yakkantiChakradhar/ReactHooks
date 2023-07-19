@@ -1,6 +1,8 @@
 
 import './App.css';
-import Fetching3 from './Components/Fetching3';
+import React from 'react';
+import ComponentC from './Components/ComponentC';
+// import Fetching3 from './Components/Fetching3';
 // import Fetching1 from './Components/Fetching1';
 // import Fetching2 from './Components/Fetching2';
 /* import IntervelHookCounter from './Components/IntervelHookCounter';*/
@@ -12,6 +14,8 @@ import UseStatePreviousState from './Components/UseStatePreviousState';
 import UseStateWithArray from './Components/UseStateWithArray';
 import UseStateWithObject from './Components/UseStateWithObject';
  */
+export const userContext = React.createContext()
+export const channelContext = React.createContext()
 function App() {
   return (
     <div className="App">
@@ -30,7 +34,16 @@ function App() {
       {/*  <IntervelHookCounter /> */}
     {/*   <Fetching1 /> */}
    {/*  <Fetching2 /> */}
-   <Fetching3 />
+  {/*  <Fetching3 /> */}
+<userContext.Provider value={'vishwas'} >
+  <channelContext.Provider value={'codeEvolution'} >
+  <ComponentC />
+  </channelContext.Provider>
+
+</userContext.Provider>
+
+
+
     </div>
   );
 }
