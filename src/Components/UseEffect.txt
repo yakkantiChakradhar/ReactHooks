@@ -1,0 +1,37 @@
+Updating the document tittle to the current counter value
+`````````````````````````````````````````````````````````
+componentDidMount() {
+     document.title = `you clicked ${this.state.count} times` 
+     }
+
+componentDidUpdate(){ 
+    document.title = `you clicked ${this.state.count} times` 
+    }
+
+Timers
+``````
+componentDidMount() {
+    this.interval = setInterval{this.tick, 1000}
+    }
+
+componentWillUnmount() {
+    clearInterval(this.interval)
+    }
+
+combine the two side effects
+````````````````````````````
+componentDidMount() {
+    document.title = `you clicked ${this.state.count} times`
+    this.interval = setInterval(this.tick,1000)
+}
+
+componentDidUpdate() {
+document.title = `You clicked ${this.state.count} times`
+}
+
+componentWillUnmount(){
+    clearInterval(this.interval)
+}
+
+The effect hook lets you perform side effects in funcitonal components.
+it is a close replacement of componentDidMount, componentDidUpdate and componentWillUnmount.
